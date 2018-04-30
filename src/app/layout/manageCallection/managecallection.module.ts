@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+
+
+
 
 import { ManagecallectionRoutingModule } from './managecallection-routing.module';
 import { ManagecallectionComponent } from './managecallection.component';
@@ -16,7 +17,7 @@ import {
 } from './components';
 import { StatModule } from '../../shared';
 // import { ConfigService } from '../../shared/services/config.service'
-// import { BrowserModule } from '@angular/platform-browser';
+
 
 
 @NgModule({
@@ -27,8 +28,6 @@ import { StatModule } from '../../shared';
         NgbAlertModule.forRoot(),
         ManagecallectionRoutingModule,
         StatModule,
-        // BrowserModule,
-        HttpClientModule,
         // NgForm
 
     ],
