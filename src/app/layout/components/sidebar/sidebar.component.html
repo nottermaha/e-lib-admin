@@ -5,7 +5,7 @@
         </a>
        
           <a routerLink="/managecallection" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Callection' | translate }}
+            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Collection' | translate }}
           </a>
           <a routerLink="/managedepartment" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-trash"></i>&nbsp;{{ 'Department' | translate }}
@@ -20,17 +20,17 @@
             <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Topic' | translate }}
           </a>
           <a routerLink="/manageuser" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'User' | translate }}
+            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Staff' | translate }}
           </a>
           <a routerLink="/new" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'New' | translate }}
+            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'News' | translate }}
           </a>
           <a routerLink="/userregister" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'User Register' | translate }}
           </a>  
 
 
-        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <!-- <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Charts' | translate }}
         </a>
         <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
@@ -47,8 +47,8 @@
         </a>
         <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i>&nbsp;{{ 'Component' | translate }}
-        </a>
-        <div class="nested-menu">
+        </a> -->
+        <!-- <div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('pages')">
                 <span><i class="fa fa-plus"></i>&nbsp; {{ 'Menu' | translate }}</span>
             </a>
@@ -149,6 +149,6 @@
                     </ul>
                 </li>
             </div>
-        </div>
+        </div> -->
     </div>
 </nav>
