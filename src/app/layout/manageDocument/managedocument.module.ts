@@ -6,6 +6,7 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ManagedocumentRoutingModule } from './managedocument-routing.module';
 import { ManagedocumentComponent } from './managedocument.component';
+import { ManagedocumentFormComponent } from './managedocument-form.component';
 
 
 
@@ -38,6 +39,7 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
+        ManagedocumentFormComponent
     ],
     providers: []
 })

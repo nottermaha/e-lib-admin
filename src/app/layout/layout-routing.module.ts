@@ -12,12 +12,26 @@ const routes: Routes = [
 
            
             { path: 'managecallection', loadChildren: './manageCallection/managecallection.module#ManagecallectionModule' },
+            { path: 'managecallection/managecallection-form', loadChildren: './manageCallection/managecallection-form.component' },
+           
             { path: 'managedepartment', loadChildren: './manageDepartment/managedepartment.module#ManagedepartmentModule' },
+            { path: 'managedepartment/managedepartment-form', loadChildren: './managedepartment/managedepartment-form.component' },
+            
             { path: 'managedocument', loadChildren: './manageDocument/managedocument.module#ManagedocumentModule' },
+            { path: 'managedocument/managedocument-form', loadChildren: './managedocument/managedocument-form.component' },
+            
             { path: 'managehelp', loadChildren: './manageHelp/managehelp.module#ManagehelpModule' },
+            { path: 'managehelp/managehelp-form', loadChildren: './managehelp/managehelp-form.component' },
+           
             { path: 'managetopic', loadChildren: './manageTopic/managetopic.module#ManagetopicModule' },
+            { path: 'managetopic/managetopic-form', loadChildren: './managetopic/managetopic-form.component' },
+            
             { path: 'manageuser', loadChildren: './manageUser/manageuser.module#ManageuserModule' },
+            { path: 'manageuser/manageuser-form', loadChildren: './manageuser/manageuser-form.component' },
+           
             { path: 'new', loadChildren: './new/new.module#NewModule' },
+            { path: 'new/new-form', loadChildren: './new/new-form.component' },
+
             { path: 'userregister', loadChildren: './userRegister/userregister.module#UserregisterModule' },
 
             { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },

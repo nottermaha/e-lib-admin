@@ -6,6 +6,7 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ManagetopicRoutingModule } from './managetopic-routing.module';
 import { ManagetopicComponent } from './managetopic.component';
+import { ManagetopicFormComponent } from './managetopic-form.component';
 
 
 
@@ -38,6 +39,7 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
+        ManagetopicFormComponent
     ],
     providers: []
 })

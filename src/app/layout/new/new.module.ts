@@ -6,6 +6,7 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NewRoutingModule } from './new-routing.module';
 import { NewComponent } from './new.component';
+import { NewFormComponent } from './new-form.component';
 
 
 
@@ -38,6 +39,7 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
+        NewFormComponent
     ],
     providers: []
 })

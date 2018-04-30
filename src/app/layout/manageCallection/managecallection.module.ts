@@ -9,7 +9,7 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ManagecallectionRoutingModule } from './managecallection-routing.module';
 import { ManagecallectionComponent } from './managecallection.component';
-
+import { ManagecallectionFormComponent } from './managecallection-form.component';
 import {
     TimelineComponent,
     NotificationComponent,
@@ -37,6 +37,7 @@ import { StatModule } from '../../shared';
         NotificationComponent,
         ChatComponent,
         // AppComponent
+        ManagecallectionFormComponent
     ],
     providers: [],
     bootstrap: [ManagecallectionComponent]
