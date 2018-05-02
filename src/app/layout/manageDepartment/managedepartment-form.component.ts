@@ -13,8 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 })
 export class ManagedepartmentFormComponent implements OnInit {
-  clients: any[];
-  dataTable: any;
+
   value:any;
   id_department:any;
 

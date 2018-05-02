@@ -12,7 +12,7 @@
           <div class="col-md-8 col-md-offset-2">
             <h2></h2>
             <div class="fh5co-spacer fh5co-spacer-sm"></div>
-            <form >
+            <form #i="ngForm" (ngSubmit)="onSubmit(i)">
               <br>
               <div class="row">
       
@@ -23,13 +23,13 @@
                 </div>
                 <div class="col-md-10">
                   <div class="form-group">
-                    <input type="number" class="form-control" placeholder="Name" name="name" >
+                    <input type="text" class="form-control" placeholder="Name" name="topic_name" ngModel="{{ value.topic_name }}">
                   </div>
                 </div>
       
                 <div class="col-md-12 text-right">
                   <div class="form-group">
-                    
+                    <input type="hidden" name="id" ngModel="{{ value.id }}">
                     <button type="submit" class="btn btn-success">
                       <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save
                     </button>

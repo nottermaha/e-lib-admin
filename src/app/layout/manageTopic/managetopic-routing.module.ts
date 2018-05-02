@@ -12,6 +12,11 @@ const routes: Routes = [
         path: 'managetopic-form', 
         component: ManagetopicFormComponent
     },
+    {
+        path: 'managetopic-form/:id_topic', 
+        component: ManagetopicFormComponent
+    },
+
 ];
 
 @NgModule({

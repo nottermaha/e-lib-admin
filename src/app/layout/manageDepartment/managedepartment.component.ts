@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { DepartmentService } from '../../shared/services/departmemnt.service'
 
 
-
 import * as $ from 'jquery';
 import 'datatables.net';
 import 'datatables.net-bs4';
@@ -16,7 +15,6 @@ import 'datatables.net-bs4';
   animations: [routerTransition()]
 })
 export class ManagedepartmentComponent implements OnInit {
-  clients: any[];
   dataTable: any;
   data: any;
 
@@ -27,10 +25,13 @@ export class ManagedepartmentComponent implements OnInit {
       this.getDepartment()
     }
     getDepartment() {
-    this.service.getDepartment().subscribe(res => {
-      console.log(res)
-      this.data = res
-    }, err=> console.log(err))
+    this.service.getDepartment()
+    .subscribe((value: any[]) => {
+      this.data = value;
+      // Now you can use jQuery DataTables :
+      const table: any = $('table');
+      this.dataTable = table.DataTable();
+    });
   }
   setStatus($id) {
     this.service.setStatusDepartment($id).subscribe(res => {
@@ -38,6 +39,5 @@ export class ManagedepartmentComponent implements OnInit {
       this.getDepartment()
     }, err => console.log(err))
   }
-
  
 }
