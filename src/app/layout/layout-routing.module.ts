@@ -15,19 +15,19 @@ const routes: Routes = [
             { path: 'managecallection/managecallection-form', loadChildren: './manageCallection/managecallection-form.component' },
            
             { path: 'managedepartment', loadChildren: './manageDepartment/managedepartment.module#ManagedepartmentModule' },
-            { path: 'managedepartment/managedepartment-form', loadChildren: './managedepartment/managedepartment-form.component' },
+            { path: 'managedepartment/managedepartment-form', loadChildren: './manageDepartment/managedepartment-form.component' },
             
             { path: 'managedocument', loadChildren: './manageDocument/managedocument.module#ManagedocumentModule' },
-            { path: 'managedocument/managedocument-form', loadChildren: './managedocument/managedocument-form.component' },
+            { path: 'managedocument/managedocument-form', loadChildren: './manageDocument/managedocument-form.component' },
             
             { path: 'managehelp', loadChildren: './manageHelp/managehelp.module#ManagehelpModule' },
-            { path: 'managehelp/managehelp-form', loadChildren: './managehelp/managehelp-form.component' },
+            { path: 'managehelp/managehelp-form', loadChildren: './manageHelp/managehelp-form.component' },
            
             { path: 'managetopic', loadChildren: './manageTopic/managetopic.module#ManagetopicModule' },
-            { path: 'managetopic/managetopic-form', loadChildren: './managetopic/managetopic-form.component' },
+            { path: 'managetopic/managetopic-form', loadChildren: './manageTopic/managetopic-form.component' },
             
             { path: 'manageuser', loadChildren: './manageUser/manageuser.module#ManageuserModule' },
-            { path: 'manageuser/manageuser-form', loadChildren: './manageuser/manageuser-form.component' },
+            { path: 'manageuser/manageuser-form', loadChildren: './manageUser/manageuser-form.component' },
            
             { path: 'new', loadChildren: './new/new.module#NewModule' },
             { path: 'new/new-form', loadChildren: './new/new-form.component' },
