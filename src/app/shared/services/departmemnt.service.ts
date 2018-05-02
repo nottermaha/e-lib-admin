@@ -13,7 +13,11 @@ export class DepartmentService {
     return this.http.get(`${API_URL}/showListDepartment/${id}`)
   }
   setDepartment(params, status) {
-    return this.http.post(`${API_URL}/department/${status}`, params);
+    return this.http.post(`${API_URL}/department/${status}`, params)
+  }
+  setStatusDepartment(id) {
+    // return this.http.post(`${API_URL}/department/delete/${id}`)
+    return this.http.delete(`${API_URL}/department/delete/${id}`)
   }
 
 }

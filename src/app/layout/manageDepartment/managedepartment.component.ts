@@ -23,24 +23,20 @@ export class ManagedepartmentComponent implements OnInit {
   constructor(private http: HttpClient, 
     private chRef: ChangeDetectorRef,
     private service: DepartmentService){}
-
-  // ngOnInit(){
-  //   this.service.getDepartment()
-  //     .subscribe((data: any[]) => {
-  //       this.clients = data;
-  
-  //       // Now you can use jQuery DataTables :
-  //       const table: any = $('table');
-  //       this.dataTable = table.DataTable();
-  //     });
-  // }
-
-
-  ngOnInit() {
+    ngOnInit() {
+      this.getDepartment()
+    }
+    getDepartment() {
     this.service.getDepartment().subscribe(res => {
       console.log(res)
       this.data = res
     }, err=> console.log(err))
+  }
+  setStatus($id) {
+    this.service.setStatusDepartment($id).subscribe(res => {
+      console.log(res)
+      this.getDepartment()
+    }, err => console.log(err))
   }
 
  
