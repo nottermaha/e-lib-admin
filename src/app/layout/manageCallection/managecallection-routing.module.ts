@@ -11,6 +11,10 @@ const routes: Routes = [
         path: 'managecallection-form', 
         component: ManagecallectionFormComponent
     },
+    {
+        path: 'managecallection-form/:id_collection', 
+        component: ManagecallectionFormComponent
+    },
 ];
 
 @NgModule({

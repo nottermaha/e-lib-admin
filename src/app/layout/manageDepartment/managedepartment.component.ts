@@ -4,10 +4,10 @@ import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 import { DepartmentService } from '../../shared/services/departmemnt.service'
 
-
 import * as $ from 'jquery';
 import 'datatables.net';
 import 'datatables.net-bs4';
+
 @Component({
   selector: 'app-managedepartment',
   templateUrl: './managedepartment.component.html',
