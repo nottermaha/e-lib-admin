@@ -12,6 +12,10 @@ const routes: Routes = [
         path: 'managedepartment-form', 
         component: ManagedepartmentFormComponent
     },
+    {
+        path: 'managedepartment-form/:id_department',
+        component: ManagedepartmentFormComponent,
+    },
 ];
 
 @NgModule({

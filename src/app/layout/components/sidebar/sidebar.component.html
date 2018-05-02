@@ -3,27 +3,26 @@
         <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
         </a>
-       
+        <a routerLink="/managedocument" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Book' | translate }}
+          </a>      
+        <a routerLink="/managedepartment" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-trash"></i>&nbsp;{{ 'Department' | translate }}
+          </a>    
+        <a routerLink="/managetopic" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Topic' | translate }}
+          </a>
           <a routerLink="/managecallection" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Collection' | translate }}
-          </a>
-          <a routerLink="/managedepartment" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-trash"></i>&nbsp;{{ 'Department' | translate }}
-          </a>
-          <a routerLink="/managedocument" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Book' | translate }}
           </a>
           <a routerLink="/managehelp" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Help' | translate }}
           </a>
-          <a routerLink="/managetopic" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Topic' | translate }}
-          </a>
-          <a routerLink="/manageuser" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Staff' | translate }}
-          </a>
           <a routerLink="/new" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'News' | translate }}
+          </a>          
+          <a routerLink="/manageuser" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'Staff' | translate }}
           </a>
           <a routerLink="/userregister" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-lock"></i>&nbsp;{{ 'User Register' | translate }}

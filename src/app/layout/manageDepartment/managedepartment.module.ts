@@ -8,15 +8,13 @@ import { ManagedepartmentRoutingModule } from './managedepartment-routing.module
 import { ManagedepartmentComponent } from './managedepartment.component';
 import { ManagedepartmentFormComponent } from './managedepartment-form.component';
 
-
-
 import {
     TimelineComponent,
     NotificationComponent,
     ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
-// import { ConfigService } from '../../shared/services/config.service'
+import { DepartmentService } from '../../shared/services/departmemnt.service'
 // import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -41,6 +39,6 @@ import {HttpClientModule} from '@angular/common/http';
         ChatComponent,
         ManagedepartmentFormComponent
     ],
-    providers: []
+    providers: [DepartmentService]
 })
 export class ManagedepartmentModule {}
