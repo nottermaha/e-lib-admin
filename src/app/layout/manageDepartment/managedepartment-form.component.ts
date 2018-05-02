@@ -13,7 +13,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 })
 export class ManagedepartmentFormComponent implements OnInit {
-
   value:any;
   id_department:any;
 
@@ -22,11 +21,8 @@ export class ManagedepartmentFormComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
    ){
-
     this.value = {
-      
     };
-
    }
 
   ngOnInit() {

@@ -12,6 +12,10 @@ const routes: Routes = [
         path: 'managehelp-form', 
         component: ManagehelpFormComponent
     },
+    {
+        path: 'managehelp-form/:id_helpcate', 
+        component: ManagehelpFormComponent
+    },
 ];
 
 @NgModule({

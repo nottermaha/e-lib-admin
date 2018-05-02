@@ -16,7 +16,7 @@ import {
     ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
-// import { ConfigService } from '../../shared/services/config.service'
+import { HelpcategoriesService } from '../../shared/services/helpcategories.service'
 // import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -41,6 +41,6 @@ import {HttpClientModule} from '@angular/common/http';
         ChatComponent,
         ManagehelpFormComponent
     ],
-    providers: []
+    providers: [HelpcategoriesService]
 })
 export class ManagehelpModule {}
