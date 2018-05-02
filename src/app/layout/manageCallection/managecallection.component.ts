@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { routerTransition } from '../../router.animations';
-// import { ConfigService } from '../../shared/services/config.service'
+import { CollectionService } from '../../shared/services/collection.service'
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -16,20 +16,29 @@ import 'datatables.net-bs4';
 
 })
 export class ManagecallectionComponent implements OnInit {
-  clients: any[];
   dataTable: any;
+  data: any;
 
-  constructor(private http: HttpClient, private chRef: ChangeDetectorRef){}
-
-  ngOnInit(){
-    this.http.get('https://5a5a9e00bc6e340012a03796.mockapi.io/clients')
-      .subscribe((data: any[]) => {
-        this.clients = data;
-  
-        // Now you can use jQuery DataTables :
-        const table: any = $('table');
-        this.dataTable = table.DataTable();
-      });
+  constructor(private http: HttpClient, 
+    private chRef: ChangeDetectorRef,
+    private service: CollectionService){}
+    ngOnInit() {
+      this.getCollection()
+    }
+    getCollection() {
+    this.service.getCollection()
+    .subscribe((value: any[]) => {
+      this.data = value;
+      // Now you can use jQuery DataTables :
+      const table: any = $('table');
+      this.dataTable = table.DataTable();
+    });
   }
-
+  setStatus($id) {
+    this.service.setStatusCollection($id).subscribe(res => {
+      console.log(res)
+      this.getCollection()
+    }, err => console.log(err))
+  }
+ 
 }
