@@ -10,7 +10,7 @@ const routes: Routes = [
     },
     {
         path: 'managehelp-form', 
-        component: ManagehelpComponent
+        component: ManagehelpFormComponent
     },
 ];
 

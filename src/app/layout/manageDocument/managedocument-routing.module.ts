@@ -10,7 +10,7 @@ const routes: Routes = [
     },
     {
         path: 'managedocument-form', 
-        component: ManagedocumentComponent
+        component: ManagedocumentFormComponent
     },
 ];
 
