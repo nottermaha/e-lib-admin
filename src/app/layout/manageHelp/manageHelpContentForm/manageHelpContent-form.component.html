@@ -1,0 +1,48 @@
+<div [@routerTransition]>
+
+
+  <div class="card-body table-responsive table-hover">
+    <br>
+    <div class="card mb-3">
+      <div class="card-header">
+        Manage Help Content Form
+      </div>
+      <div class="animated fadeIn">
+        <div class="row">
+          <div class="col-md-12 col-md-offset-2">
+            <h2></h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form #i="ngForm" (ngSubmit)="onSubmit(i)">
+
+              <br>
+              <div class="row" style="padding: 25px">
+
+                <div class="col-md-2 col-2 text-right">
+                  <div class="form-group">
+                    <label class="col-form-label">Content</label>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="content" name="help_content" ngModel="{{ content }}">
+                  </div>
+                </div>
+
+              </div>
+              <div class="row" style="padding: 25px">
+                <div class="col-md-12 text-right">
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-success">
+                      <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

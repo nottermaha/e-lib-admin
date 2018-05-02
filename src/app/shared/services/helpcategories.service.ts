@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class HelpcategoriesService {
   constructor(private http: HttpClient) { }
-  getHelpcategories(){
+  getHelpcategories() {
     return this.http.get(`${API_URL}/showListHelpCategories`)
   }
-  getHelpcategoriesById(id){
+  getHelpcategoriesById(id) {
     return this.http.get(`${API_URL}/showListHelpCategories/${id}`)
   }
   setHelpcategories(params, status) {
@@ -18,6 +18,22 @@ export class HelpcategoriesService {
   setStatusHelpcategories(id) {
     // return this.http.post(`${API_URL}/department/delete/${id}`)
     return this.http.delete(`${API_URL}/helpCategories/delete/${id}`)
+  }
+
+  getHelpContent(IdHelpCategories) {
+    return this.http.get(`${API_URL}/showListHelpContent/${IdHelpCategories}`)
+  }
+
+  getHelpContentById(id) {
+    return this.http.get(`${API_URL}/showHelpContent/${id}`)
+  }
+
+  setHelpContent(params, status) {
+    return this.http.post(`${API_URL}/helpContent/${status}`, params)
+  }
+
+  setStatusHelpContent(id) {
+    return this.http.delete(`${API_URL}/helpContent/delete/${id}`)
   }
 
 }

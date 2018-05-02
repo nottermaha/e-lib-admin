@@ -1,0 +1,64 @@
+<div [@routerTransition]>
+  <br>
+  <h2 class="text-muted">
+    &nbsp;&nbsp;Manage Help Content
+    <!-- <small>Servicebox Overview</small> -->
+  </h2>
+  <div class="container">
+
+    <div class="card-body table-responsive table-hover">
+      <div class="row">
+        <div class="col-6 col-md-6 text-left">
+          <a [routerLink]="['/managehelp']" class="btn btn-warning">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Back
+          </a>
+        </div>
+        <div class="col-6 col-md-6 text-right">
+          <a [routerLink]="['/managehelp/manageHelpContentForm', IdHelpCategories]" class="btn btn-primary">
+            <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;New
+          </a>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          Manage Help Content
+        </div>
+        <div class="card-body table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let HelpContent of HelpContents ; let i = index;">
+                <td>{{ i + 1 }}</td>
+                <td>{{HelpContent.help_content}}</td>
+                <td>
+                  <a [routerLink]="['/managehelp/manageHelpContentForm', IdHelpCategories, HelpContent.id]" class="btn btn-warning">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                  </a>
+                </td>
+                <td width="200px;">
+                  <button type="button" (click)="setStatusHelpContent(HelpContent.id)" class="btn btn-danger">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  </button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
