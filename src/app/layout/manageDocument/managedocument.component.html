@@ -1,29 +1,368 @@
 <div [@routerTransition]>
   <br>
   <h2 class="text-muted">
-    &nbsp;&nbsp;Manage help
+    &nbsp;&nbsp;Manage Book
     <!-- <small>Servicebox Overview</small> -->
   </h2>
   <div class="container">
 
  <aw-wizard>
   <aw-wizard-step stepTitle="Title of step 1">
+
+      <div class="card-body table-responsive table-hover">
+          <br>
+          <div class="card mb-3">
+            <div class="card-header">
+                Gerneral Information
+            </div>
+          <div class="animated fadeIn">
+          <div class="row">
+            <div class="col-md-12">
+              <h2></h2>
+              <div class="fh5co-spacer fh5co-spacer-sm"></div>
+              <form >
+                <br>
+
+                <div class="row">
+                  <div class="col-md-2 text-right">
+                    <div class="form-group">
+                      <label class="col-form-label">Title</label>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Name" name="name" >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Keyword</label>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" name="name" >
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Collection</label>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value=""> Checkbox 1
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>
+                                    <input type="checkbox" value=""> Checkbox 1
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>
+                                    <input type="checkbox" value=""> Checkbox 1
+                                </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Department/Author</label>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value=""> Checkbox 1
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value=""> Checkbox 2
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value=""> Checkbox 3
+                              </label>
+                          </div>
+                          <div class="checkbox">
+                              <label>
+                                  <input type="checkbox" value=""> Checkbox 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  <input type="text" class="form-control" placeholder="Name" name="name" >
+                              </label>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Introduction/Abstract</label>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                          <textarea rows="4" cols="80">
+                              
+                          </textarea>
+                      </div>
+                    </div>
+                </div>
+                
+                
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+  </div>
+
     Content of Step 1
-    <button type="button" awNextStep>Next Step</button>
-    <button type="button" [awGoToStep]="{stepIndex: 2}">Go directly to third Step</button>
+    <button type="button" awNextStep class="btn btn-primary">Next</button>
+    <button type="button" [awGoToStep]="{stepIndex: 2}" class="btn btn-primary">Last</button>
   </aw-wizard-step>
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <aw-wizard-step stepTitle="Title of step 2" awOptionalStep>
+
+      <div class="card-body table-responsive table-hover">
+          <br>
+          <div class="card mb-3">
+            <div class="card-header">
+                Gerneral Information
+            </div>
+          <div class="animated fadeIn">
+          <div class="row">
+            <div class="col-md-12">
+              <h2></h2>
+              <div class="fh5co-spacer fh5co-spacer-sm"></div>
+              <form >
+                <br>
+
+                <div class="row">
+                  <div class="col-md-2 text-right">
+                    <div class="form-group">
+                      <label class="col-form-label">Title</label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input type="date" class="form-control" placeholder="Name" name="name" >
+                    </div>
+                  </div>
+                  <div class="col-md-1 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Title</label>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Name" name="name" >
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Country</label>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">&nbsp;Thailand
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>
+                                    <input type="checkbox" value="">&nbsp;Laos
+                                </label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label>
+                                    <input type="checkbox" value="">&nbsp;Chana
+                                </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Other</label>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                          <select class="form-control" id="sel1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="row">
+                    <div class="col-md-2 text-right">
+                      <div class="form-group">
+                        <label class="col-form-label">Referance link</label>
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="WWW." name="name" >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-2 text-right">
+                        <div class="form-group">
+                          <label class="col-form-label">Attachment file</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <input type="file" class="form-control" placeholder="WWW." name="name" >
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-2 text-right">
+                        <div class="form-group">
+                          <label class="col-form-label">Frame picture</label>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <input type="file" class="form-control" placeholder="WWW." name="name" >
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-2 text-right">
+                        <div class="form-group">
+                          <label class="col-form-label">Topic</label>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value=""> Checkbox 1
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value=""> Checkbox 2
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value=""> Checkbox 3
+                                </label>
+                            </div>
+
+                        </div>
+                      </div>
+                  </div>
+                
+                
+                
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+  </div>
+
     Content of Step 2
-    <button type="button" awPreviousStep>Go to previous step</button>
-    <button type="button" awNextStep>Go to next step</button>
+    <button type="button" awPreviousStep class="btn btn-primary">Back</button>
+    <button type="button" awNextStep class="btn btn-primary">Next</button>
   </aw-wizard-step>
+  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <aw-wizard-step stepTitle="Title of step 3">
+
+      <div class="card-body table-responsive table-hover">
+          <br>
+          <div class="card mb-3">
+            <div class="card-header">
+                Gerneral Information
+            </div>
+          <div class="animated fadeIn">
+          <div class="row">
+            <div class="col-md-12">
+              <h2></h2>
+              <div class="fh5co-spacer fh5co-spacer-sm"></div>
+              <form >
+                <br>
+
+                <div class="row">
+                  <div class="col-md-2 text-right">
+                    <div class="form-group">
+                      <label class="col-form-label">Access Authority</label>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="">Option 1
+                          </label>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="">Option 2
+                          </label>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" value="">Option 3
+                          </label>
+
+                    </div>
+                  </div>
+                </div>
+
+                   <div class="col-md-12 text-center">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-success">
+                        <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save
+                      </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <button type="" class="btn btn-danger">
+                          <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Cancel
+                      </button>
+                    </div>
+                  </div> 
+
+                
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+  </div>
     Content of Step 3
-    <button type="button" awPreviousStep>Previous Step</button>
-    <button type="button" (click)="finishFunction()">Finish</button>
+    <button type="button" awPreviousStep class="btn btn-primary">Back</button>
+    <button type="button" (click)="finishFunction()" class="btn btn-primary">Next</button>
   </aw-wizard-step>
 </aw-wizard>
-
 
 
   </div>
