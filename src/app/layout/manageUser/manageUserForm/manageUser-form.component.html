@@ -1,0 +1,98 @@
+<div [@routerTransition]>
+
+
+  <div class="card-body table-responsive table-hover">
+    <br>
+    <div class="card mb-3">
+      <div class="card-header">
+        Manage Staff Form
+      </div>
+      <div class="animated fadeIn">
+        <div class="row">
+          <div class="col-md-12 col-md-offset-2">
+            <h2></h2>
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <form #i="ngForm" (ngSubmit)="onSubmit(i)">
+
+              <br>
+              <div class="row" style="padding: 25px">
+
+                <div class="col-md-2 col-sm-3 col-5 text-right">
+                  <div class="form-group">
+                    <label class="col-form-label">Username</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Username" name="username" ngModel="{{ username }}">
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-5 text-right">
+                  <div class="form-group">
+                    <label class="col-form-label">Password</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Password" name="password" ngModel="{{ password }}">
+                  </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-5 text-right">
+                  <div class="form-group">
+                    <label class="col-form-label">First Name</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="First Name" name="f_name" ngModel="{{ firstName }}">
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-5 text-right">
+                  <div class="form-group">
+                    <label class="col-form-label">Last Name</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Last Name" name="l_name" ngModel="{{ lastName }}">
+                  </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-5 text-right">
+                  <div class="form-group">
+                    <label class="col-form-label">Department</label>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <select name="department_id" ngModel="{{ idDepartment }}" class="form-control">
+                      <option value="0">Please select a Department.</option>
+                      <option *ngFor="let department of departments" value="{{ department.id }}">{{ department.id }}&nbsp;{{ department.department_name }}</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="row" style="padding: 25px">
+
+                <div class="col-md-12 text-right">
+                  <a [routerLink]="['/manageuser']" class="btn btn-warning">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Back
+                  </a>
+                  <button type="submit" class="btn btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save
+                  </button>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>

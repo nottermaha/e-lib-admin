@@ -27,7 +27,6 @@ const routes: Routes = [
             { path: 'managetopic/managetopic-form', loadChildren: './manageTopic/managetopic-form.component' },
             
             { path: 'manageuser', loadChildren: './manageUser/manageuser.module#ManageuserModule' },
-            { path: 'manageuser/manageuser-form', loadChildren: './manageUser/manageuser-form.component' },
            
             { path: 'new', loadChildren: './new/new.module#NewModule' },
             { path: 'new/new-form', loadChildren: './new/new-form.component' },
