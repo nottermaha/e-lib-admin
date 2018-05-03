@@ -8,7 +8,8 @@ import { ManagedocumentRoutingModule } from './managedocument-routing.module';
 import { ManagedocumentComponent } from './managedocument.component';
 import { ManagedocumentFormComponent } from './managedocument-form.component';
 
-
+// Import your library
+import { ArchwizardModule } from 'angular-archwizard';
 
 import {
     TimelineComponent,
@@ -20,8 +21,10 @@ import { StatModule } from '../../shared';
 // import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
+import { PageHeaderModule } from '../../shared';
 @NgModule({
     imports: [
+        ArchwizardModule,
         CommonModule,
         FormsModule,
         NgbCarouselModule.forRoot(),
@@ -30,6 +33,7 @@ import {HttpClientModule} from '@angular/common/http';
         StatModule,
         // BrowserModule,
         HttpClientModule,
+
         
         // NgForm
 
@@ -39,7 +43,8 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
-        ManagedocumentFormComponent
+        ManagedocumentFormComponent,
+
     ],
     providers: []
 })

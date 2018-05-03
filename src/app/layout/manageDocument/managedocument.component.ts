@@ -3,7 +3,6 @@ import { routerTransition } from '../../router.animations';
 import { HttpClient } from '@angular/common/http';
 // import { ConfigService } from '../../shared/services/config.service'
 
-import { Subscription } from 'rxjs/Subscription';
 
 import * as $ from 'jquery';
 import 'datatables.net';
@@ -26,6 +25,7 @@ export class ManagedocumentComponent implements OnInit {
         this.clients = data;
   
         // Now you can use jQuery DataTables :
+        this.chRef.detectChanges();
         const table: any = $('table');
         this.dataTable = table.DataTable();
       });

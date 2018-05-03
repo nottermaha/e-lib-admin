@@ -1,57 +1,31 @@
 <div [@routerTransition]>
   <br>
   <h2 class="text-muted">
-    &nbsp;&nbsp;Manage document
+    &nbsp;&nbsp;Manage help
     <!-- <small>Servicebox Overview</small> -->
   </h2>
   <div class="container">
 
-      <div class="card-body table-responsive table-hover">
-        <div class="col-sm-12 col-md-12 text-right">
-          <a [routerLink]="['/managedocument/managedocument-form']" class="btn btn-primary">
-            <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;New
-          </a>
-        </div>
-        <br>
-    
-        <div class="card mb-3">
-          <div class="card-header">
-              Manage document
-          </div>
-          <div class="card-body table-responsive">
-            <table class="table table-hover">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Name</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let client of clients ; let i = index;">
-                    <td>{{ i + 1 }}</td>
-                  <td>{{client.firstName}}</td>
-                  <!-- <td>{{value.status}}</td> -->
-                  <td>
-                    <a  class="btn btn-warning">
-                      <i class="fa fa-pencil" aria-hidden="true"></i>
-                    </a>
-                  </td>
-                  <td  width="200px;">
-                    <button type="button"  class="btn btn-danger">
-                      <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    </button>
-                  </td>
-                </tr>
-    
-              </tbody>
-            </table>
-          </div>
-        </div>
-    
-      </div>
-    
-      </div>
+ <aw-wizard>
+  <aw-wizard-step stepTitle="Title of step 1">
+    Content of Step 1
+    <button type="button" awNextStep>Next Step</button>
+    <button type="button" [awGoToStep]="{stepIndex: 2}">Go directly to third Step</button>
+  </aw-wizard-step>
+  <aw-wizard-step stepTitle="Title of step 2" awOptionalStep>
+    Content of Step 2
+    <button type="button" awPreviousStep>Go to previous step</button>
+    <button type="button" awNextStep>Go to next step</button>
+  </aw-wizard-step>
+  <aw-wizard-step stepTitle="Title of step 3">
+    Content of Step 3
+    <button type="button" awPreviousStep>Previous Step</button>
+    <button type="button" (click)="finishFunction()">Finish</button>
+  </aw-wizard-step>
+</aw-wizard>
+
+
+
+  </div>
   
 </div>
