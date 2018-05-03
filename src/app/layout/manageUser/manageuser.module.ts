@@ -7,6 +7,7 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { ManageuserRoutingModule } from './manageuser-routing.module';
 import { ManageuserComponent } from './manageuser.component';
 import { ManageUserFormComponent } from './manageUserForm/manageUser-form.component'
+import { ViewUserFormComponent } from './viewUserForm/viewUserForm.component'
 
 import { StaffService } from '../../shared/services/staff.service'
 import { DepartmentService } from '../../shared/services/departmemnt.service'
@@ -40,7 +41,8 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
-        ManageUserFormComponent
+        ManageUserFormComponent,
+        ViewUserFormComponent
     ],
     providers: [
         StaffService,

@@ -31,7 +31,11 @@
             <tbody>
               <tr *ngFor="let staff of staffs ; let i = index;">
                 <td>{{ i + 1 }}</td>
-                <td>{{ staff.f_name }}&nbsp;&nbsp;{{ staff.l_name }}</td>
+                <td>
+                  <a [routerLink]="['/manageuser/ViewUserForm', staff.id]">
+                    {{ staff.f_name }}&nbsp;&nbsp;{{ staff.l_name }}
+                  </a>
+                </td>
                 <td>
                   <a [routerLink]="['/manageuser/ManageUserForm', staff.id]" class="btn btn-warning">
                     <i class="fa fa-pencil" aria-hidden="true"></i>

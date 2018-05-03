@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ManageuserComponent } from './manageuser.component';
 import { ManageUserFormComponent } from './manageUserForm/manageUser-form.component'
+import { ViewUserFormComponent } from './viewUserForm/viewUserForm.component'
 const routes: Routes = [
     {
         path: '', 
@@ -14,6 +15,10 @@ const routes: Routes = [
     {
         path: 'ManageUserForm/:IdStaff', 
         component: ManageUserFormComponent
+    },
+    {
+        path: 'ViewUserForm/:IdStaff', 
+        component: ViewUserFormComponent
     },
 ];
 
