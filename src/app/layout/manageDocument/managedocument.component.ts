@@ -3,7 +3,6 @@ import { routerTransition } from '../../router.animations';
 import { HttpClient } from '@angular/common/http';
 // import { ConfigService } from '../../shared/services/config.service'
 
-import { Subscription } from 'rxjs/Subscription';
 
 import * as $ from 'jquery';
 import 'datatables.net';

@@ -30,6 +30,7 @@ import {HttpClientModule} from '@angular/common/http';
         StatModule,
         // BrowserModule,
         HttpClientModule,
+
         
         // NgForm
 
@@ -39,7 +40,8 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
-        ManagedocumentFormComponent
+        ManagedocumentFormComponent,
+
     ],
     providers: []
 })
