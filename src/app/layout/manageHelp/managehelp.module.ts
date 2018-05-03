@@ -7,6 +7,8 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { ManagehelpRoutingModule } from './managehelp-routing.module';
 import { ManagehelpComponent } from './managehelp.component';
 import { ManagehelpFormComponent } from './managehelp-form.component';
+import { ManageHelpContent } from './manageHelpContent/manageHelpContent.component';
+import { ManageHelpContentFormComponent } from './manageHelpContentForm/manageHelpContent-form.component';
 
 
 
@@ -39,7 +41,9 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
-        ManagehelpFormComponent
+        ManagehelpFormComponent,
+        ManageHelpContent,
+        ManageHelpContentFormComponent
     ],
     providers: [HelpcategoriesService]
 })

@@ -24,6 +24,7 @@
                 <tr>
                   <th>#</th>
                   <th>Name</th>
+                  <th>Content</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -33,6 +34,11 @@
                     <td>{{ i + 1 }}</td>
                   <td>{{value.help_title}}</td>
                   <!-- <td>{{value.status}}</td> -->
+                  <td>
+                    <a [routerLink]="['/managehelp/manageHelpContent', value.id]" class="btn btn-primary">
+                      <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+                    </a>
+                  </td>
                   <td>
                     <a [routerLink]="['/managehelp/managehelp-form', value.id]" class="btn btn-warning">
                       <i class="fa fa-pencil" aria-hidden="true"></i>

@@ -5,38 +5,41 @@
     <br>
     <div class="card mb-3">
       <div class="card-header">
-        Manage staff
+        Manage Help Content Form
       </div>
       <div class="animated fadeIn">
         <div class="row">
-          <div class="col-md-12 col-md-offset-2" style="padding: 25px">
+          <div class="col-md-12 col-md-offset-2">
             <h2></h2>
             <div class="fh5co-spacer fh5co-spacer-sm"></div>
-            <form>
+            <form #i="ngForm" (ngSubmit)="onSubmit(i)">
+
               <br>
-              <div class="row">
+              <div class="row" style="padding: 25px">
 
                 <div class="col-md-2 col-1 text-right">
                   <div class="form-group">
-                    <label class="col-form-label">First Name</label>
+                    <label class="col-form-label">Content</label>
                   </div>
                 </div>
                 <div class="col-md-10">
                   <div class="form-group">
-                    <input type="number" class="form-control" placeholder="First Name" name="f_name">
+                    <input type="text" class="form-control" placeholder="content" name="help_content" ngModel="{{ content }}">
                   </div>
                 </div>
 
+              </div>
+              <div class="row" style="padding: 25px">
                 <div class="col-md-12 text-right">
-                  <a [routerLink]="['/manageuser']" class="btn btn-warning">
+                  <a [routerLink]="['/managehelp/manageHelpContent', IdHelpCategories]" class="btn btn-warning">
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Back
                   </a>
                   <button type="submit" class="btn btn-success">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save
                   </button>
                 </div>
-
               </div>
+
             </form>
           </div>
         </div>
