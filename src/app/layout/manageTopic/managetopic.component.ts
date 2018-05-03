@@ -28,6 +28,7 @@ import 'datatables.net-bs4';
       .subscribe((value: any[]) => {
         this.data = value;
         // Now you can use jQuery DataTables :
+        this.chRef.detectChanges();
         const table: any = $('table');
         this.dataTable = table.DataTable();
       });

@@ -25,6 +25,7 @@ export class ManageuserComponent implements OnInit {
         this.clients = data;
   
         // Now you can use jQuery DataTables :
+        this.chRef.detectChanges();
         const table: any = $('table');
         this.dataTable = table.DataTable();
       });

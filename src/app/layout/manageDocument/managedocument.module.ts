@@ -20,6 +20,7 @@ import { StatModule } from '../../shared';
 // import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
+import { PageHeaderModule } from '../../shared';
 @NgModule({
     imports: [
         CommonModule,
