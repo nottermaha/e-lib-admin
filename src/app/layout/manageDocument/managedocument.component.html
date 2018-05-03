@@ -1,3 +1,5 @@
+
+
 <div [@routerTransition]>
   <br>
   <h2 class="text-muted">
@@ -8,9 +10,12 @@
 
  <aw-wizard>
   <aw-wizard-step stepTitle="Title of step 1">
+<br>
+    Content of Step 1
+    <button type="button" awNextStep class="btn btn-primary">Next</button>
+    <button type="button" [awGoToStep]="{stepIndex: 2}" class="btn btn-primary">Last</button>
 
       <div class="card-body table-responsive table-hover">
-          <br>
           <div class="card mb-3">
             <div class="card-header">
                 Gerneral Information
@@ -31,7 +36,7 @@
                   </div>
                   <div class="col-md-8">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Name" name="name" >
+                      <input type="text" class="form-control" placeholder="Title..." name="name" >
                     </div>
                   </div>
                 </div>
@@ -42,9 +47,9 @@
                         <label class="col-form-label">Keyword</label>
                       </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-4">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" name="name" >
+                        <input type="text" class="form-control" placeholder="Keyword..." name="name" >
                       </div>
                     </div>
                 </div>
@@ -56,19 +61,19 @@
                       </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="checkbox">
+                        <div class="radio">
                                 <label>
-                                    <input type="checkbox" value=""> Checkbox 1
+                                    <input type="radio" value=""> Checkbox 1
                                 </label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <label>
-                                    <input type="checkbox" value=""> Checkbox 1
+                                    <input type="radio" value=""> Checkbox 1
                                 </label>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <label>
-                                    <input type="checkbox" value=""> Checkbox 1
+                                    <input type="radio" value=""> Checkbox 1
                                 </label>
                         </div>
                     </div>
@@ -82,26 +87,27 @@
                     </div>
                     <div class="col-md-8">
                       <div class="form-group">
-                          <div class="checkbox">
+                          <div class="radio">
                               <label>
-                                  <input type="checkbox" value=""> Checkbox 1
+                                  <input type="radio" value=""> Checkbox 1
                               </label>
                           </div>
-                          <div class="checkbox">
+                          <div class="radio">
                               <label>
-                                  <input type="checkbox" value=""> Checkbox 2
+                                  <input type="radio" value=""> Checkbox 2
                               </label>
                           </div>
-                          <div class="checkbox">
+                          <div class="radio">
                               <label>
-                                  <input type="checkbox" value=""> Checkbox 3
+                                  <input type="radio" value=""> Checkbox 3
                               </label>
                           </div>
-                          <div class="checkbox">
-                              <label>
-                                  <input type="checkbox" value=""> Checkbox 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <div class="radio">
+                              <!-- <label>
+                                  <input type="checkbox" value=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                   <input type="text" class="form-control" placeholder="Name" name="name" >
-                              </label>
+                              </label> -->
+                              <label class="radio-inline"><input type="radio" name="optradio">Author &nbsp;</label><input type="text" class="form-control" placeholder="Name" name="name" >
                           </div>
                       </div>
                     </div>
@@ -130,7 +136,7 @@
     </div>
     
   </div>
-
+<br>
     Content of Step 1
     <button type="button" awNextStep class="btn btn-primary">Next</button>
     <button type="button" [awGoToStep]="{stepIndex: 2}" class="btn btn-primary">Last</button>
@@ -138,8 +144,10 @@
   <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <aw-wizard-step stepTitle="Title of step 2" awOptionalStep>
 
+    Content of Step 2    
+    <button type="button" awNextStep class="btn btn-primary">Next</button>
+    <button type="button" awPreviousStep class="btn btn-primary">Back</button>
       <div class="card-body table-responsive table-hover">
-          <br>
           <div class="card mb-3">
             <div class="card-header">
                 Gerneral Information
@@ -182,20 +190,38 @@
                       </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="checkbox">
+                        <div class="radio">
+                          <div class="col-md-4">
                                 <label>
-                                    <input type="checkbox" value="">&nbsp;Thailand
+                                    <input type="radio" value="">&nbsp;Cambodia
                                 </label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <label>
-                                    <input type="checkbox" value="">&nbsp;Laos
-                                </label>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <label>
-                                    <input type="checkbox" value="">&nbsp;Chana
-                                </label>
+                          </div>
+                          <div class="col-md-4">
+                              <label>
+                                  <input type="radio" value="">&nbsp;China
+                              </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>
+                                <input type="radio" value="">&nbsp;Lao PDR
+                            </label>
+                      </div>
+                      <div class="col-md-4">
+                          <label>
+                              <input type="radio" value="">&nbsp;Myanmar
+                          </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label>
+                            <input type="radio" value="">&nbsp;Thailand
+                        </label>
+                  </div>
+                  <div class="col-md-4">
+                      <label>
+                          <input type="radio" value="">&nbsp;Vietnam
+                      </label>
+                </div>
+
                         </div>
                     </div>
                 </div>
@@ -265,26 +291,14 @@
                       </div>
                       <div class="col-md-8">
                         <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Checkbox 1
-                                </label>
+                            <div class="radio" *ngFor="let value of topic ; let i = index;">
+                                <label><input type="radio" name="optradio">&nbsp;{{value.topic_name}}</label>
                             </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Checkbox 2
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value=""> Checkbox 3
-                                </label>
-                            </div>
+      
 
                         </div>
                       </div>
                   </div>
-                
                 
                 
               </form>
@@ -294,16 +308,20 @@
     </div>
     
   </div>
-
-    Content of Step 2
-    <button type="button" awPreviousStep class="btn btn-primary">Back</button>
+<br>
+    Content of Step 2    
     <button type="button" awNextStep class="btn btn-primary">Next</button>
+    <button type="button" awPreviousStep class="btn btn-primary">Back</button>
+
+    
   </aw-wizard-step>
   <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <aw-wizard-step stepTitle="Title of step 3">
 
+    Content of Step 3
+    <button type="button" awPreviousStep class="btn btn-primary">Back</button>
+    <button type="button" (click)="finishFunction()" class="btn btn-primary">Next</button>
       <div class="card-body table-responsive table-hover">
-          <br>
           <div class="card mb-3">
             <div class="card-header">
                 Gerneral Information
@@ -325,14 +343,17 @@
                   <div class="col-md-8">
                     <div class="form-group">
                       
-                        <label class="checkbox-inline">
-                            <input type="checkbox" value="">Option 1
-                          </label>
-                          <label class="checkbox-inline">
-                            <input type="checkbox" value="">Option 2
-                          </label>
-                          <label class="checkbox-inline">
-                            <input type="checkbox" value="">Option 3
+                        <label class="radio-inline" style="padding-right:40px;">
+                          <input type="radio" name="optradio">&nbsp;Free Access
+                        </label>
+                        <label class="radio-inline" style="padding-right:40px;">
+                          <input type="radio" name="optradio">&nbsp;Access by Login
+                        </label>
+                        <label class="radio-inline" style="padding-right:40px;">
+                          <input type="radio" name="optradio">&nbsp;Read Only
+                        </label>
+                        <label class="radio-inline" style="padding-right:40px;">
+                            <input type="radio" name="optradio">&nbsp;None
                           </label>
 
                     </div>

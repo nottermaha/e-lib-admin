@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 import { HttpClient } from '@angular/common/http';
 // import { ConfigService } from '../../shared/services/config.service'
-
+import { TopicService } from '../../shared/services/topic.service'
 
 import * as $ from 'jquery';
 import 'datatables.net';
@@ -16,19 +16,19 @@ import 'datatables.net-bs4';
 export class ManagedocumentComponent implements OnInit {
   clients: any[];
   dataTable: any;
+  topic :any
 
-  constructor(private http: HttpClient, private chRef: ChangeDetectorRef){}
+  constructor(private http: HttpClient, private chRef: ChangeDetectorRef,
+    private service: TopicService){}
 
-  ngOnInit(){
-    this.http.get('https://5a5a9e00bc6e340012a03796.mockapi.io/clients')
-      .subscribe((data: any[]) => {
-        this.clients = data;
-  
-        // Now you can use jQuery DataTables :
-        this.chRef.detectChanges();
-        const table: any = $('table');
-        this.dataTable = table.DataTable();
-      });
+    ngOnInit() {
+      this.getTopic()
+    }
+    getTopic() {
+      this.service.getTopic().subscribe(res => {
+        console.log(res)
+        this.topic = res
+      }, err=> console.log(err))
   }
 
 

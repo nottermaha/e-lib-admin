@@ -17,7 +17,7 @@ import {
     ChatComponent
 } from './components';
 import { StatModule } from '../../shared';
-// import { ConfigService } from '../../shared/services/config.service'
+import { TopicService } from '../../shared/services/topic.service'
 // import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -46,6 +46,6 @@ import { PageHeaderModule } from '../../shared';
         ManagedocumentFormComponent,
 
     ],
-    providers: []
+    providers: [TopicService]
 })
 export class ManagedocumentModule {}
