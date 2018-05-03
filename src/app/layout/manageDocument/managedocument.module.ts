@@ -18,6 +18,7 @@ import {
 } from './components';
 import { StatModule } from '../../shared';
 import { TopicService } from '../../shared/services/topic.service'
+import { CountryService } from '../../shared/services/country.service'
 // import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -46,6 +47,6 @@ import { PageHeaderModule } from '../../shared';
         ManagedocumentFormComponent,
 
     ],
-    providers: [TopicService]
+    providers: [TopicService,CountryService]
 })
 export class ManagedocumentModule {}

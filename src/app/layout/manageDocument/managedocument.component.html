@@ -89,17 +89,22 @@
                       <div class="form-group">
                           <div class="radio">
                               <label>
-                                  <input type="radio" value=""> Checkbox 1
+                                  <input type="radio" value=""> Agricultural Development and Commer Commercialization
                               </label>
                           </div>
                           <div class="radio">
                               <label>
-                                  <input type="radio" value=""> Checkbox 2
+                                  <input type="radio" value=""> Trade and Investment Facilitation
                               </label>
                           </div>
                           <div class="radio">
                               <label>
-                                  <input type="radio" value=""> Checkbox 3
+                                  <input type="radio" value=""> Innovation and Technological Connectivity
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" value=""> Regional and Local Economic Development - East West Economic Corridor (RLED-EWEC)
                               </label>
                           </div>
                           <div class="radio">
@@ -232,13 +237,15 @@
                         <label class="col-form-label">Other</label>
                       </div>
                     </div>
+
+                    <!-- <div class="radio" *ngFor="let value of topic ; let i = index;">
+                        <label><input type="radio" name="optradio">&nbsp;{{value.topic_name}}</label>
+                    </div> -->
+
                     <div class="col-md-8">
                       <div class="form-group">
-                          <select class="form-control" id="sel1">
-                              <option>1</option>
-                              <option>2</option>
-                              <option>3</option>
-                              <option>4</option>
+                          <select class="form-control" id="sel1" >
+                              <option *ngFor="let value of country ; let i = index;">{{value.caption}}</option>
                             </select>
                       </div>
                     </div>
