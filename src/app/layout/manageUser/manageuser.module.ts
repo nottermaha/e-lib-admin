@@ -6,8 +6,10 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ManageuserRoutingModule } from './manageuser-routing.module';
 import { ManageuserComponent } from './manageuser.component';
-import { ManageuserFormComponent } from './manageuser-form.component';
+import { ManageUserFormComponent } from './manageUserForm/manageUser-form.component'
 
+import { StaffService } from '../../shared/services/staff.service'
+import { DepartmentService } from '../../shared/services/departmemnt.service'
 
 import {
     TimelineComponent,
@@ -38,8 +40,11 @@ import {HttpClientModule} from '@angular/common/http';
         TimelineComponent,
         NotificationComponent,
         ChatComponent,
-        ManageuserFormComponent
+        ManageUserFormComponent
     ],
-    providers: []
+    providers: [
+        StaffService,
+        DepartmentService
+    ]
 })
 export class ManageuserModule {}

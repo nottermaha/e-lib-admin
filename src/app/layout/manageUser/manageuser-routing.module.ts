@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ManageuserComponent } from './manageuser.component';
-import { ManageuserFormComponent } from './manageuser-form.component';
+import { ManageUserFormComponent } from './manageUserForm/manageUser-form.component'
 const routes: Routes = [
     {
         path: '', 
         component: ManageuserComponent
     },
     {
-        path: 'manageuser-form', 
-        component: ManageuserFormComponent
+        path: 'ManageUserForm', 
+        component: ManageUserFormComponent
+    },
+    {
+        path: 'ManageUserForm/:IdStaff', 
+        component: ManageUserFormComponent
     },
 ];
 
